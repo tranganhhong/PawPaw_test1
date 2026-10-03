@@ -1,0 +1,228 @@
+/* ================= KHAI BÁO BIẾN (MÀU SẮC, FONT) ================= */
+:root {
+    --pink-light: #F8E1E1; /* Hồng phấn nhạt */
+    --purple-gray: #806E83; /* Tím xám */
+    --blue-light: #C1CFE6; /* Xanh dương nhạt */
+    --blue-pastel: #99B4DA; /* Xanh dương pastel */
+    --blue-dark: #6982D5; /* Xanh dương đậm */
+    --white: #ffffff;
+    --text-main: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* Nền website màu hồng nhẹ */
+body {
+    background-color: var(--pink-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ================= NÚT BẤM ================= */
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--blue-dark);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--blue-pastel);
+    color: var(--white);
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--purple-gray);
+    border: 1px solid var(--purple-gray);
+}
+
+.btn-secondary:hover {
+    background-color: var(--blue-light);
+    color: var(--blue-dark);
+    border-color: var(--blue-light);
+}
+
+/* ================= HEADER ================= */
+.header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--blue-dark);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--purple-gray);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--blue-dark);
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+/* ================= BODY CHIA FRAME (35-65) ================= */
+/* Container chia cột ngang không có nền card trắng */
+.frame-container {
+    display: flex;
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    gap: 40px; /* Khoảng cách giữa frame trái và phải */
+    margin: 60px auto; /* Đẩy nội dung xa header và footer */
+    min-height: 400px;
+}
+
+/* Frame 35% - Hình ảnh */
+.frame-35 {
+    width: 35%;
+}
+
+.image-frame {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    background-image: url("../../assets/images/about.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Frame 65% - Nội dung */
+.frame-65 {
+    width: 65%;
+}
+
+.content-frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    color: var(--blue-dark);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.content-text {
+    color: var(--purple-gray);
+    font-size: 17px;
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.hero-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background-color: var(--purple-gray);
+    color: var(--white);
+    padding-top: 40px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px; 
+    align-items: flex-start;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-logo {
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    color: var(--pink-light);
+}
+
+.footer-contact h3 {
+    margin-top: 15px; 
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-contact ul {
+    list-style: none;
+}
+
+.footer-contact ul li {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: var(--pink-light);
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 10px; /* Khoảng cách giữa icon ảnh và chữ */
+}
+
+.footer-bottom {
+    padding: 15px 20px;
+    font-size: 13px;
+    color: var(--pink-light);
+    text-align: left;
+}
+
+.footer-icon {
+    width: 20px; /* Bạn có thể tăng giảm số này tùy theo độ to nhỏ của icon */
+    height: 20px;
+    object-fit: contain; /* Giúp ảnh không bị méo */
+}
